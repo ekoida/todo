@@ -3,6 +3,13 @@
   --shadow: rgba(0, 0, 0, 0.25);
   --bg: #ffffff;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -12,15 +19,92 @@
   background: var(--bg);
   box-shadow: 2px 6px 13px 1px var(--shadow);
 }
+
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-family: Inter, sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: var(--main-drak, #2b2d42);
+  font-family: Inter;
   font-size: 2.25rem;
-  font-style: normal;
   font-weight: 500;
+  margin-top: 2.62rem;
+}
+
+.placeholder {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+input {
+  padding-inline-start: 10px;
+  width: 100%;
+}
+
+button {
+  display: flex;
+  padding: 0.625rem;
+  background: var(--gray, #8d99ae);
+}
+
+input::placeholder_app {
+  color: var(--gray, #8d99ae);
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
   line-height: normal;
-  color: var(--main-drak);
+}
+
+.list_of_item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.todo_item {
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 0.125rem;
+  border: 1px solid var(--main-light, #edf2f4);
+  background: #fff;
+}
+
+.todo-item-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+p {
+  color: #000;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.item_done {
+  text-decoration: line-through;
+}
+
+.delete_basket {
+}
+
+@media (min-width: 375px) {
+  .container {
+    width: 90vw;
+    height: 90vh;
+  }
 }
