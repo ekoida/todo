@@ -20,6 +20,13 @@ body {
   box-shadow: 2px 6px 13px 1px var(--shadow);
 }
 
+@media (min-width: 375px) {
+  .container {
+    width: 90vw;
+    height: 90vh;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -53,7 +60,7 @@ button {
   background: var(--gray, #8d99ae);
 }
 
-input::placeholder_app {
+.new_todo {
   color: var(--gray, #8d99ae);
   font-family: Inter;
   font-size: 1.25rem;
@@ -67,6 +74,8 @@ input::placeholder_app {
   flex-direction: column;
   gap: 16px;
   padding: 16px;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .todo_item {
@@ -100,11 +109,4 @@ p {
 }
 
 .delete_basket {
-}
-
-@media (min-width: 375px) {
-  .container {
-    width: 90vw;
-    height: 90vh;
-  }
 }
