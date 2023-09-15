@@ -47,12 +47,11 @@ function createToDoItem(toDoItem) {
   const img = document.createElement("img");
   if (toDoItem.isActive === false) {
     img.setAttribute("alt", "chevron-circle");
-    img.setAttribute("src", "img/chevron-circle.svg")
+    img.setAttribute("src", "img/chevron-circle.svg");
   } else {
     img.setAttribute("alt", "circle");
     img.setAttribute("src", "img/circle.svg");
   }
-
 
   const pItem = document.createElement("p");
   pItem.classList.add("item");
@@ -82,21 +81,16 @@ function drawToDo() {
   }
 }
 
-
 const addButton = document.querySelector(".add_button");
-addButton.addEventListener('click', function(){
-  
-  
+addButton.addEventListener("click", function () {
   const newToDo = document.querySelector(".new_todo");
   const newToDoValue = newToDo.value;
   console.log(newToDoValue);
   listOfItem.unshift({
-    content:newToDoValue,
+    content: newToDoValue,
     isActive: true,
     isDeleted: false,
-  })
+  });
   newToDo.value = "";
- drawToDo();
-})
-
-
+  drawToDo();
+});
